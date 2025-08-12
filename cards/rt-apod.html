@@ -83,7 +83,7 @@
 				fetch(apodApi)
 					.then(response => response.json())
 					.then(json=>{
-						debugger;
+						//debugger;//
 						console.log(json);
 						const nasaPic = document.getElementById('apodImg');
 						nasaPic.src = json.url;
