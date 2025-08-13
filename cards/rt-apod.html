@@ -70,7 +70,7 @@
 </head>
 <body>
     <div class="imgwrapper">
-        <img src=apodImg>
+        <img id="apodImg">
     </div>
 
     <h1 class="header">
@@ -83,9 +83,8 @@
 				fetch(apodApi)
 					.then(response => response.json())
 					.then(json=>{
-						//debugger;//
 						console.log(json);
-						const nasaPic = document.getElementById('apodImg');
+						const nasaPic = document.getElementById("apodImg");
 						nasaPic.src = json.url;
 					})
 					.catch(error => console.error('Could not fetch APOD. Error:', error));
